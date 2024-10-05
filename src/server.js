@@ -51,8 +51,9 @@ export function setupServer() {
       });
     } catch (error) {
       res.status(500).json({
-        message: error.message,
+        message: 'Internal server error',
       });
+      console.error(error.message);
     }
   });
 
