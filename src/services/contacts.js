@@ -10,3 +10,24 @@ export async function getContactById(contactId) {
 
   return contact;
 }
+
+export async function createContact(newContact) {
+  const contact = await ContactsCollection.create(newContact);
+  return contact;
+}
+
+export async function updateContact(contactId, contact) {
+  const updatedContact = await ContactsCollection.findOneAndUpdate(
+    {
+      _id: contactId,
+    },
+    contact,
+    { new: true },
+  );
+  return updatedContact;
+}
+
+export async function deleteContact(contactId) {
+  const contact = await ContactsCollection.findByIdAndDelete(contactId);
+  return contact;
+}
