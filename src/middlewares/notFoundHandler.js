@@ -1,6 +1,5 @@
-export function notFoundHandler(req, res, next) {
+export function notFoundHandler(req, res) {
   res.status(404).json({
-    message: 'Not found',
+    message: 'Route not found',
   });
-  next();
 }
