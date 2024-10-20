@@ -5,7 +5,7 @@ export function isValidId(req, res, next) {
   const { contactId } = req.params;
 
   if (!isValidObjectId(contactId)) {
-    throw createHttpError(400, 'Bad request');
+    throw createHttpError(400, 'Id is not valid');
   }
   next();
 }
