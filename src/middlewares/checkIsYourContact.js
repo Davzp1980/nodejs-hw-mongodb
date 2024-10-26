@@ -7,7 +7,6 @@ export async function checkIsYourContact(req, res, next) {
   const { contactId } = req.params;
 
   const contact = await ContactsCollection.findById(contactId);
-  console.log(contact);
 
   if (!contact) {
     next(createHttpError(404, 'Contact not found'));
