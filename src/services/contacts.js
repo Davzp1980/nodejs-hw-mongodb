@@ -49,8 +49,13 @@ export async function getContactById(contactId) {
   return contact;
 }
 
-export async function createContact(newContact) {
-  const contact = await ContactsCollection.create(newContact);
+export async function createContact(userId, newContact) {
+  const contact = await ContactsCollection.create({
+    userId: userId.toString(),
+    ...newContact,
+  });
+  console.log(userId.toString());
+
   return contact;
 }
 
