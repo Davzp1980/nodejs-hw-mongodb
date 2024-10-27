@@ -28,7 +28,7 @@ contactsRouter.get('/', ctrlWrapper(getAllContactsController));
 
 contactsRouter.get(
   '/:contactId',
-  checkIsYourContact,
+
   isValidId,
   ctrlWrapper(getContactByIdController),
 );
@@ -45,7 +45,7 @@ contactsRouter.patch(
 
   jsonParser,
   isValidId,
-  checkIsYourContact,
+
   validateBody(updateContactSchema),
   ctrlWrapper(updateContactController),
 );
