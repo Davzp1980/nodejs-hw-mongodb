@@ -64,8 +64,6 @@ export async function createContact(userId, newContact) {
 }
 
 export async function updateContact(userId, contactId, contact) {
-  console.log('userId:', userId);
-  console.log('contactId:', contactId);
   const updatedContact = await ContactsCollection.findOneAndUpdate(
     {
       _id: contactId,
