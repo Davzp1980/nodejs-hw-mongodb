@@ -53,7 +53,7 @@ contactsRouter.patch(
 contactsRouter.delete(
   '/:contactId',
   isValidId,
-  checkIsYourContact,
+
   ctrlWrapper(deleteContactController),
 );
 
