@@ -58,7 +58,6 @@ export async function createContact(userId, newContact) {
     userId: userId.toString(),
     ...newContact,
   });
-  console.log(userId.toString());
 
   return contact;
 }
@@ -80,6 +79,6 @@ export async function deleteContact(userId, contactId) {
     userId: userId,
     _id: contactId,
   });
-  // const contact = await ContactsCollection.findByIdAndDelete(contactId);
+
   return contact;
 }
