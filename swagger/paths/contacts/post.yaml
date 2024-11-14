@@ -13,10 +13,7 @@ requestBody:
         required:
           - name
           - phoneNumber
-          - email
-          - isFavourite
           - contactType
-          - photo
         properties:
           name:
             description: "Contact's name"
