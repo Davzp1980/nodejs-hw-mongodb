@@ -31,7 +31,6 @@ requestBody:
             description: 'Type of contact'
             type: string
             enum: ['work', 'home', 'personal']
-
           photo:
             description: "Contact's avatar"
             type: string

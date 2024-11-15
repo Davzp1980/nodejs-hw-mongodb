@@ -454,11 +454,8 @@
           "_id",
           "name",
           "phoneNumber",
-          "email",
-          "isFavourite",
           "contactType",
-          "userId",
-          "photo"
+          "userId"
         ],
         "properties": {
           "_id": {
