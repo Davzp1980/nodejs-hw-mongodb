@@ -33,6 +33,10 @@ requestBody:
             description: "Contact's avatar"
             type: string
             format: binary
+          isFavourite:
+            description: 'Is contact favorite'
+            type: boolean
+            example: false
 responses:
   '201':
     description: Create a contact

@@ -310,6 +310,11 @@
                     "description": "Contact's avatar",
                     "type": "string",
                     "format": "binary"
+                  },
+                  "isFavourite": {
+                    "description": "Is contact favorite",
+                    "type": "boolean",
+                    "example": false
                   }
                 }
               }
@@ -397,6 +402,11 @@
                     "description": "Contact's avatar",
                     "type": "string",
                     "format": "binary"
+                  },
+                  "isFavourite": {
+                    "description": "Is contact favorite",
+                    "type": "boolean",
+                    "example": false
                   }
                 }
               }
