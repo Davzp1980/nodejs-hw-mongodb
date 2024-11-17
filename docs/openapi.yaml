@@ -19,6 +19,8 @@ paths:
       $ref: '../swagger/paths/contacts/{id}/get.yaml'
     delete:
       $ref: '../swagger/paths/contacts/delete.yaml'
+    patch:
+      $ref: '../swagger/paths/contacts/patch.yaml'
 
   /contacts:
     get:
@@ -26,9 +28,6 @@ paths:
 
     post:
       $ref: '../swagger/paths/contacts/post.yaml'
-
-    patch:
-      $ref: '../swagger/paths/contacts/patch.yaml'
 
 components:
   securitySchemes:

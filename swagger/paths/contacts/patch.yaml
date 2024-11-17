@@ -2,11 +2,18 @@
 
 tags:
   - Contacts
-summary: Patch contact
-operationId: patchContact
-description: 'Patch a contact with payload'
+summary: Update contact by id
+operationId: updateContact
+description: 'Update contact by id'
 security:
   - bearerAuth: []
+parameters:
+  - in: path
+    name: id
+    required: true
+    schema:
+      type: string
+      example: '671f66a2c1889554f6956e54'
 requestBody:
   content:
     multipart/form-data:
@@ -37,6 +44,7 @@ requestBody:
             description: 'Is contact favorite'
             type: boolean
             example: false
+
 responses:
   '201':
     description: Create a contact
@@ -60,3 +68,28 @@ responses:
               $ref: '../../components/schemas/contact.yaml'
   '401':
     $ref: '../../components/responses/401.yaml'
+  '404':
+    description: 'Not found error'
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - status
+            - message
+            - data
+          properties:
+            status:
+              type: number
+              example: 404
+            message:
+              type: string
+              example: 'NotFound'
+            data:
+              type: object
+              required:
+                - message
+              properties:
+                message:
+                  type: string
+                  example: 'Contact not found'
